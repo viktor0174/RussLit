@@ -3,13 +3,41 @@
   * version: 3 beta
   * Date of change: 13.03.2019
   */
+var domain = location.origin;
 function ready() {
 	DialogueOfCultures();
 	ChildrenDraw();
-	RequestDataFromLinkParam ();	
+	RequestDataFromLinkParam ();
+	// $(".btnBack").append('<div style="width:400px; height:150px; margin-left:-60px; color:red; display:block;">'+config[0]+'</div>');
+
+	//scrollTopPage();
+	// Переменная-флаг для отслеживания того, происходит ли в данный момент запрос [false - запрос не в процессе выполнения. true - запрос выполняется]
+	var inProgress = false;
+	// Последовательно загружая из раздела [0 - загружается при запросе раздела, 1- запрос следующих данных]
+	var startFrom = 1;
+	// Используйте вариант $('#more').click(function() для того, чтобы дать пользователю возможность управлять процессом, кликая по кнопке "Дальше" под блоком статей
+	/*
+	$(window).scroll(function() {
+		// Если высота окна + высота прокрутки больше или равны высоте всего документа и ajax-запрос в настоящий момент не выполняется, то запускаем ajax-запрос
+		// if($(window).scrollTop() + $(window).height() >= $(document).height() - 200 && !inProgress)
+		if($(window).scrollTop() + $(window).height() >= $(document).height() && !inProgress && GetData) //200
+		{
+
+			url_data = domain+"/Publications/RussLit_section_"+section_id+"?page="+startFrom;
+			create_xmlhttp();
+					xmlHttp.open("GET",url_data, true);
+					xmlHttp.onreadystatechange = AddContent;
+					xmlHttp.send(null);
+			// По факту окончания запроса снова меняем значение флага на false
+			inProgress = false;
+			// Увеличиваем на 10 порядковый номер статьи, с которой надо начинать выборку из базы
+			startFrom += 1;
+		}
+	});
+	*/
 	var tag_css = document.createElement('link');
 		tag_css.rel  = 'stylesheet';
-		tag_css.href = 'http://kultura174.ru/shadowbox/shadowbox.css';
+		tag_css.href = domain+'/shadowbox/shadowbox.css';
 		tag_css.type = 'text/css';
 		var tag_head = document.getElementsByTagName('head');
 		//tag_head[0].appendChild(tag_css);
@@ -118,7 +146,7 @@ function RequestDataFromLinkParam () {
 		if(link[1] != undefined) {
 			section(link[1]);
 			//console.log("[Request link] section:"+link[1]+" | data:"+link[2]);
-			getData ('http://kultura174.ru/Publications/RussLit_section_'+link[1]+'/'+link[2]);
+			getData (domain+'/Publications/RussLit_section_'+link[1]+'/'+link[2]);
 			//getSRussLit(link[1], 0);
 			LinkBack();
 		}
@@ -154,7 +182,7 @@ function DisplayPages (){
 	}
 }
 function DialogueOfCultures(){
-	$.ajax({ type: "GET", url: 'http://kultura174.ru/Publications/RussLit_section_4', cache: true, async: true,
+	$.ajax({ type: "GET", url: domain+'/Publications/RussLit_section_4', cache: true, async: true,
 		success: function(data){
 			var result = $(data).find(".news .item #img_wrp:first");
 			if(result[length] != undefined) {
@@ -165,7 +193,7 @@ function DialogueOfCultures(){
 	});
 }
 function ChildrenDraw(){
-	$.ajax({ type: "GET", url: 'http://kultura174.ru/Publications/RussLit_section_3', cache: true,  async: true,
+	$.ajax({ type: "GET", url: domain+'/Publications/RussLit_section_3', cache: true,  async: true,
 		success: function(data){
 			var result = $(data).find(".news .item #img_wrp:first");
 			if(result[length] != undefined) {
@@ -184,7 +212,7 @@ function ChildrenDraw(){
 function getSRussLit(s, page=0){
 	if(page == undefined || page === '' || page == null) { page=0 }
 	if(s==0 || s=="additionalUnit") return;
-	var PT, uri='http://kultura174.ru',i=0;
+	var PT, uri=domain,i=0;
 	section(s); startFrom = 2; ContentData('none');
 	// ********
 	if(s != 'main') {
