@@ -1,0 +1,48 @@
+/*
+ * 
+ */
+ /*
+#FormOfTest {
+	width:700px; 
+	margin:0 auto;
+}
+*/
+.ResultBlock .catchword { 
+	font: normal 1em/130% Tahoma, Geneva, sans-serif;
+	font-family:  Tahoma;
+	font-size:45px; 
+	margin:0px 0px 0px -2px;
+}
+.blockInfoResult {
+	margin-top:15px;
+}
+fieldset {
+	background-color: #ededed; /*#ffe3c4;*/
+}
+#testResult_square {
+	border:1px solifd #000;
+	font-size:0px;
+	height:20px;
+}
+.square {
+	width: 16px;
+	height: 16px;
+	background: rgb(0, 120, 200);
+	margin-right:7px;
+	color:rgb(0, 120, 200);
+	overflow: hidden;
+	display:block;
+	overflow: hidden;
+	float:left;
+}
+#NumberOfResponses {
+	font: normal 1em/130% Tahoma, Geneva, sans-serif;
+	width:600px;	
+}
+.accent {
+	color: rgb(0, 120, 200);
+	font: normal 1em/130% Tahoma, Geneva, sans-serif;
+	margin:0px 3px 0px 0px;
+	font-style: italic;
+	font-weight: bolder;
+}

@@ -1,0 +1,32 @@
+ 
+.QuestionBlock2 em {text-align: justify;}
+.Block {margin:10px auto; text-align: center; border:1px solid #BDBDBD; width:320px; padding:5px; background:#F2F2F2;}
+.Block img {height:404px; width:300px;  border:1px solid #BDBDBD;}
+.Label { width:300px;background:#CECEF6; margin:5px auto; cursor:pointer; padding:3px 0px 3px 0px;color:#086A87; font-size:16px;}
+.Label:hover {background:#BDBDBD; color:#086A87;}
+ 
+/*
+#weak, #normal, #strong, #zero, #reloadBtn {text-align: justify; display:none;}
+*/
+/* .ResultBlock {margin:0 auto; font-size:18px;} */
+/*
+.QuestionBlock {text-align: left;}
+.ResultBlock { display:none; margin:20px;}
+
+#id_btn {text-align: center;}
+*/
+/*
+#NumberOfResponses {float:left; font-weight: bold; margin-right:7px;}
+
+
+.knopka {
+  color: #fff; 
+  text-decoration: none;
+  user-select: none;
+  background: rgb(212,75,56);
+  padding: .7em 1.5em;
+  outline: none;
+  }
+.knopka:hover  { background: rgb(232,95,76); cursor:pointer;}
+.knopka:active { background: rgb(152,15,0);  cursor:pointer;}
+*/

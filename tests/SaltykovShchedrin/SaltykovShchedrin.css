@@ -1,0 +1,35 @@
+/*
+
+
+*/
+
+.QuestionBlock2 {
+    border-top:0px solid red;
+    width:800px;
+    margin:0px auto 20px auto;
+
+}
+.correctAnswer {
+   display:none;
+    margin:10px 0px 0px 0px;
+    font-size:23px;
+    color:white;
+
+    padding:20px;
+    background:#4d220094;
+    text-align:center;
+}
+
+.Label {
+    cursor:pointer;
+    text-align:center;
+}
+.Label:hover {
+    background:#e6e6e6;
+}
+.signature {
+    text-align:center;
+    color:#4d2200;
+    font-size:25px;
+    font-weight:normal;
+}

@@ -1,0 +1,58 @@
+.QuestionBlock {text-align: left;}
+.ResultBlock { display:none; margin:20px;}
+#id_btn {text-align: center;}
+#weak, #normal, #strong, #zero, #hard {text-align: justify; display:none;}
+#NumberOfResponses {float:left; font-weight: bold; margin-right:7px;}
+
+
+.knopka {
+  color: #fff; /* цвет текста */
+  text-decoration: none;
+  user-select: none;
+  background: rgb(212,75,56);
+  padding: .7em 1.5em;
+  outline: none;
+  }
+.knopka:hover  { background: rgb(232,95,76); cursor:pointer;}
+.knopka:active { background: rgb(152,15,0);  cursor:pointer;}
+
+/* * */
+.ResultBlock .catchword { 
+	font: normal 1em/130% Tahoma, Geneva, sans-serif;
+	font-family:  Tahoma;
+	font-size:45px; 
+	margin:0px 0px 0px -2px;
+}
+.blockInfoResult {
+	margin-top:15px;
+}
+fieldset {
+	background-color: #ededed; /*#ffe3c4;*/
+}
+#testResult_square {
+	border:1px solifd #000;
+	font-size:0px;
+	height:20px;
+}
+.square {
+	width: 16px;
+	height: 16px;
+	background: rgb(0, 120, 200);
+	margin-right:7px;
+	color:rgb(0, 120, 200);
+	overflow: hidden;
+	display:block;
+	overflow: hidden;
+	float:left;
+}
+#NumberOfResponses {
+	font: normal 1em/130% Tahoma, Geneva, sans-serif;
+	width:600px;	
+}
+.accent {
+	color: rgb(0, 120, 200);
+	font: normal 1em/130% Tahoma, Geneva, sans-serif;
+	margin:0px 3px 0px 0px;
+	font-style: italic;
+	font-weight: bolder;
+}
